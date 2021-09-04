@@ -12,230 +12,110 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  background-color: rgb(66, 66, 66);
+  background-image: url(./assets/bw-wallpaper-1920x1080.jpg);
+  background-position: center;
+  background-size: contain;
+  animation: custom_bgsize 30s linear alternate infinite;
+}
+@keyframes custom_bgsize {
+  from {
+    background-size: 90%;
+  }
+  to {
+    background-size: 120%;
+  }
 }
 .layoutcontainer {
   height: 100%;
   width: 100%;
-  background-image: url("./assets/bg2.jpeg");
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-/* Navigation Bar at top */
-.NavBar {
-  display: flex;
-  flex-direction: column;
-  height: 20%;
-  width: 100%;
-  background-color: #000022;
-  background-image: url("./assets/bg.jpg");
-  background-position: left;
-  background-size: contain;
-  justify-content: center;
-  animation: moveRight 30s linear infinite;
-  box-shadow: 0px 4px 2px #333333;
-  position: fixed;
-  top: 0;
-}
-@keyframes moveRight {
-  from {
-    background-position: left;
-  }
-  to {
-    background-position: right;
-  }
-}
-.NavBar__Heading {
-  height: 60%;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 2.4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* border-style: solid;
-    border-color: red; */
-}
-.NavBar__TabContainer {
-  height: 39%;
-  display: flex;
-  flex-direction: row;
-  color: #ffffff;
-  align-items: flex-end;
-  padding-bottom: 0.5%;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-.NavBar__Tab {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  border-left-width: 2px;
-  border-color: rgba(180, 180, 180, 0.4);
-  border-left-style: solid;
-  cursor: pointer;
-  transition-duration: 0.6s;
-  overflow: hidden;
-  position: relative;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 0.8rem;
-}
-.NavBar__Tab--right {
-  border-right-width: 2px;
-  border-right-style: solid;
-}
-.NavBar__Tab:hover {
-  background-color: rgba(180, 180, 180, 0.2);
-}
-.NavBar__Tab:after {
-  content: "";
-  background: rgba(180, 180, 180, 0.2);
-  display: block;
-  position: absolute;
-  padding-top: 200%;
-  padding-left: 350%;
-  margin-left: 0;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s;
-}
-.NavBar__Tab:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s;
-}
-
-/* Content for tabs: Common Layouts and stuff */
-.TabContent__ContainerVertical {
-  height: 90%;
-  width: 98%;
-  padding-top: 10%;
-  padding-left: 1%;
-  padding-right: 1%;
-  padding-bottom: 1%;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  color: #ffffff;
-  scrollbar-color: #331144 transparent;
-  scrollbar-width: thin;
-}
-.TabContent__ContainerVertical::-webkit-scrollbar {
-  background: transparent;
-  width: 10px;
-}
-.TabContent__ContainerVertical::-webkit-scrollbar-track {
-  background: transparent;
-}
-.TabContent__ContainerVertical::-webkit-scrollbar-thumb {
-  background: #331144;
-}
-.TabContent__ContainerHorizontal {
-  height: 95%;
-  width: 98%;
-  padding-top: 10%;
-  padding-left: 1%;
-  padding-right: 1%;
-  padding-bottom: 1%;
-  display: flex;
-  flex-direction: row;
-  overflow-y: auto;
-}
-
-/* About tab */
-.AboutTab__LeftColumn {
-  height: 100%;
-  width: 60%;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
 }
-.AboutTab__RightColumn {
-  height: 100%;
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.AboutTab__Image {
-  height: 50%;
-  width: auto;
-  margin-bottom: 10%;
-}
-.AboutTab__Image:hover {
-  height: 60%;
-  width: auto;
-}
-.AboutTab__h1 {
-  margin-top: 10%;
-  color: #ffffff;
-  font-size: 1.6rem;
-  font-weight: bold;
-}
-.AboutTab__h2 {
-  margin-top: 2%;
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: bold;
-}
-.AboutTab__p {
-  color: #ffffff;
-}
-.AboutTab__hr {
-  border-color: rgba(255, 255, 255, 0.125);
-  width: 90%;
-  margin-top: 6%;
-}
-
-/* EducationTab */
-.EducationTab__Table {
-  width: 100%;
-  padding-left: 5%;
-  padding-right: 5%;
-  border-collapse: collapse;
-}
-table.EducationTab__Table td,
-table.EducationTab__Table th {
-  border-width: 2;
+.test__class {
   border-style: solid;
-  border-color: rgba(180, 180, 180, 0.4);
-  text-align: center;
-  padding: 1%;
+  border-width: 3;
+  border-color: yellowgreen;
 }
-.EducationTab__DrawerHeading {
-  margin-top: 1%;
-  padding-left: 2%;
-  padding-top: 1%;
-  padding-bottom: 1%;
+
+.navbar__container {
+  height: 15%;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.navbar__tab {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   transition-duration: 0.5s;
-  color: #ffffff;
-  font-size: 1.6rem;
-  font-weight: bold;
 }
-.EducationTab__DrawerHeading:hover {
-  background-color: #aaaaaa55;
-  cursor: pointer;
-}
-.EducationTab__DrawerHeading::after {
+.navbar__tab::after {
+  display: none;
   content: "\00bb";
+  color: #ffffff;
   position: sticky;
   float: right;
-  right: 2%;
-  transition-duration: 0.5s;
+  right: 1;
+  transition-duration: 1s;
   opacity: 0;
 }
-.EducationTab__DrawerHeading:hover::after {
+.navbar__tab:hover {
+  cursor: pointer;
+  justify-content: space-evenly;
+}
+.navbar__tab:hover::after {
+  display: block;
   opacity: 1;
   float: right;
   right: 6%;
 }
-.EducationTab__DrawerContent {
-  padding-left: 2%;
+.navbar__tab:active {
+  opacity: 0.5;
 }
+.tabbg__orange {
+  background-color: rgba(187, 119, 51, 1);
+}
+.tabbg__orange:hover {
+  background-color: rgba(187, 119, 51, 0.7);
+}
+.tabbg__lightblue {
+  background-color: rgba(119, 136, 221, 1);
+}
+.tabbg__lightblue:hover {
+  background-color: rgba(119, 136, 221, 0.7);
+}
+.tabbg__whitegreen {
+  background-color: rgba(214, 233, 201, 1);
+}
+.tabbg__whitegreen:hover {
+  background-color: rgba(214, 233, 201, 0.7);
+}
+.tabbg__purple {
+  background-color: rgb(125, 76, 173);
+}
+.tabbg__purple:hover {
+  background-color: rgba(125, 76, 173, 0.7);
+}
+
+.content__container {
+  height: 75%;
+  width: 90%;
+  background-color: rgba(180, 180, 180, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-color: #331144 transparent;
+  scrollbar-width: thin;
+}
+
