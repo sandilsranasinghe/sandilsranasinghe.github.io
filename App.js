@@ -75,7 +75,7 @@ var AboutTab = function AboutTab(props) {
     { "class": "content__container" },
     React.createElement(
       "div",
-      { "class": "horizontal__container about__innercontainer" },
+      { "class": "about__innercontainer" },
       React.createElement(
         "div",
         { "class": "about__leftcolumn" },
@@ -94,6 +94,38 @@ var AboutTab = function AboutTab(props) {
         )
       ),
       React.createElement("img", { src: "./assets/Photo.png", "class": "about__rightimage" })
+    ),
+    React.createElement(
+      "div",
+      { "class": "about__bottomcontainer" },
+      React.createElement(
+        "div",
+        null,
+        " Sandil S. Ranasinghe "
+      ),
+      React.createElement(
+        "div",
+        { "class": "about__bottomcontainer__email" },
+        React.createElement("i", { "class": "fas fa-envelope about__bottomcontainer__icon" }),
+        React.createElement(
+          "a",
+          { href: "mailto: ranasinghewmdss.20@uom.lk" },
+          "Email"
+        )
+      ),
+      React.createElement(
+        "div",
+        { "class": "about__bottomcontainer__linkedin" },
+        React.createElement("i", { "class": "fab fa-linkedin about__bottomcontainer__icon" }),
+        React.createElement(
+          "a",
+          {
+            href: "https://www.linkedin.com/in/sandil-ranasinghe-a8563890/",
+            target: "_blank"
+          },
+          "LinkedIn"
+        )
+      )
     )
   );
 };

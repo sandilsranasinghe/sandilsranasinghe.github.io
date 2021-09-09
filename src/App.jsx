@@ -51,7 +51,7 @@ const AboutTab = (props) => {
 
   return (
     <div class="content__container">
-      <div class="horizontal__container about__innercontainer">
+      <div class="about__innercontainer">
         <div class="about__leftcolumn">
           <h1> Hi! I'm Sandil </h1>
           <hr />
@@ -61,6 +61,22 @@ const AboutTab = (props) => {
           </p>
         </div>
         <img src="./assets/Photo.png" class="about__rightimage" />
+      </div>
+      <div class="about__bottomcontainer">
+        <div> Sandil S. Ranasinghe </div>
+        <div class="about__bottomcontainer__email">
+          <i class="fas fa-envelope about__bottomcontainer__icon"></i>
+          <a href="mailto: ranasinghewmdss.20@uom.lk">Email</a>
+        </div>
+        <div class="about__bottomcontainer__linkedin">
+          <i class="fab fa-linkedin about__bottomcontainer__icon"></i>
+          <a
+            href="https://www.linkedin.com/in/sandil-ranasinghe-a8563890/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+        </div>
       </div>
     </div>
   );
