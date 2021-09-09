@@ -2,23 +2,99 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
 
 var NavBarTab = function NavBarTab(_ref) {
   var name = _ref.name,
-      color_class = _ref.color_class;
+      color_class = _ref.color_class,
+      setCurrentTab = _ref.setCurrentTab;
+
+  var handleTabClick = function handleTabClick() {
+    setCurrentTab(name);
+  };
 
   return React.createElement(
-    'div',
-    { 'class': "navbar__tab tabbg__" + color_class },
+    "div",
+    { "class": "navbar__tab tabbg__" + color_class, onClick: handleTabClick },
     name
   );
 };
-var NavBar = function NavBar() {
-  var navBarTabs = [{ name: 'About', color_class: 'orange' }, { name: 'Experience', color_class: 'lightblue' }, { name: 'Tools & Skills', color_class: 'whitegreen' }, { name: 'More', color_class: 'purple' }];
+var NavBar = function NavBar(_ref2) {
+  var setCurrentTab = _ref2.setCurrentTab;
+
+  var navBarTabs = [{ name: "About", color_class: "orange" }, { name: "Experience", color_class: "lightblue" }, { name: "Tools & Skills", color_class: "whitegreen" }, { name: "More", color_class: "purple" }];
 
   return React.createElement(
-    'div',
-    { 'class': 'navbar__container' },
+    "div",
+    { "class": "navbar__container" },
     navBarTabs.map(function (t, ind) {
-      return React.createElement(NavBarTab, { name: t.name, color_class: t.color_class, key: 'navbartab' + ind });
+      return React.createElement(NavBarTab, {
+        name: t.name,
+        color_class: t.color_class,
+        setCurrentTab: setCurrentTab,
+        key: "navbartab" + ind
+      });
     })
+  );
+};
+
+var TabContent = function TabContent(_ref3) {
+  var currentTab = _ref3.currentTab;
+
+  switch (currentTab) {
+    case "About":
+      return React.createElement(AboutTab, null);
+    case "Experience":
+      return React.createElement(
+        "div",
+        { "class": "content__container" },
+        currentTab
+      );
+    case "Tools & Skills":
+      return React.createElement(
+        "div",
+        { "class": "content__container" },
+        currentTab
+      );
+    case "More":
+      return React.createElement(
+        "div",
+        { "class": "content__container" },
+        currentTab
+      );
+    default:
+      return React.createElement(
+        "div",
+        { "class": "content__container" },
+        currentTab
+      );
+  }
+};
+
+var AboutTab = function AboutTab(props) {
+  var expYears = new Date().getFullYear() - 2019;
+
+  return React.createElement(
+    "div",
+    { "class": "content__container" },
+    React.createElement(
+      "div",
+      { "class": "horizontal__container about__innercontainer" },
+      React.createElement(
+        "div",
+        { "class": "about__leftcolumn" },
+        React.createElement(
+          "h1",
+          null,
+          " Hi! I'm Sandil "
+        ),
+        React.createElement("hr", null),
+        React.createElement(
+          "p",
+          null,
+          "I'm a Fullstack Web Developer with ",
+          expYears,
+          " years of experience and a computer science enthusiast and student."
+        )
+      ),
+      React.createElement("img", { src: "./assets/Photo.png", "class": "about__rightimage" })
+    )
   );
 };
 
@@ -29,14 +105,10 @@ var App = function App() {
       setCurrentTab = _React$useState2[1];
 
   return React.createElement(
-    'div',
-    { 'class': 'layoutcontainer' },
-    React.createElement(NavBar, null),
-    React.createElement(
-      'div',
-      { 'class': 'content__container' },
-      'ContentContainer'
-    )
+    "div",
+    { "class": "layoutcontainer" },
+    React.createElement(NavBar, { setCurrentTab: setCurrentTab }),
+    React.createElement(TabContent, { currentTab: currentTab })
   );
 };
 
