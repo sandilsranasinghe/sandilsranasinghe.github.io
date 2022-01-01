@@ -42,9 +42,9 @@ const TabContent = ({ currentTab }) => {
     case "Experience":
       return <ExperienceTab />;
     case "Tools & Skills":
-      return <div class="">{currentTab}</div>;
+      return <ToolsTab />;
     case "More":
-      return <div class="">{currentTab}</div>;
+      return <MoreTab />;
     default:
       return <div class="">{currentTab}</div>;
   }
@@ -154,6 +154,26 @@ const ExperienceTab = (props) => {
           }
 
         </div>
+      </div>
+    </div>
+  )
+}
+
+const ToolsTab = (props) => {
+  return (
+    <div class="container-fluid py-2">
+      <div class="row px-2 px-md-4 py-5 py-md-4 gx-2">
+        Under Construction
+      </div>
+    </div>
+  )
+}
+
+const MoreTab = (props) => {
+  return (
+    <div class="container-fluid py-2">
+      <div class="row px-2 px-md-4 py-5 py-md-4 gx-2">
+        Coming Soon
       </div>
     </div>
   )

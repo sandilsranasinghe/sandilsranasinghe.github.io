@@ -51,17 +51,9 @@ var TabContent = function TabContent(_ref3) {
     case "Experience":
       return React.createElement(ExperienceTab, null);
     case "Tools & Skills":
-      return React.createElement(
-        "div",
-        { "class": "" },
-        currentTab
-      );
+      return React.createElement(ToolsTab, null);
     case "More":
-      return React.createElement(
-        "div",
-        { "class": "" },
-        currentTab
-      );
+      return React.createElement(MoreTab, null);
     default:
       return React.createElement(
         "div",
@@ -235,6 +227,30 @@ var ExperienceTab = function ExperienceTab(props) {
           return React.createElement(ExperienceBubble, exp);
         })
       )
+    )
+  );
+};
+
+var ToolsTab = function ToolsTab(props) {
+  return React.createElement(
+    "div",
+    { "class": "container-fluid py-2" },
+    React.createElement(
+      "div",
+      { "class": "row px-2 px-md-4 py-5 py-md-4 gx-2" },
+      "Under Construction"
+    )
+  );
+};
+
+var MoreTab = function MoreTab(props) {
+  return React.createElement(
+    "div",
+    { "class": "container-fluid py-2" },
+    React.createElement(
+      "div",
+      { "class": "row px-2 px-md-4 py-5 py-md-4 gx-2" },
+      "Coming Soon"
     )
   );
 };
