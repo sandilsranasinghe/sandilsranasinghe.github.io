@@ -21,7 +21,7 @@ body {
   overflow: hidden;
   overflow-y: auto;
 }
-.test__class {
+.test_class {
   border-style: solid;
   border-width: 3;
   border-color: yellowgreen;
@@ -36,6 +36,9 @@ body {
   height: 100%;
   width: 100%;
   background-color: rgba(180, 180, 180, 0.5);
+}
+.transparent_bg_dark {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -105,6 +108,7 @@ body {
   text-decoration: underline;
 }
 
+
 .timeline {
   position: relative;
 }
@@ -117,4 +121,45 @@ body {
   bottom: 1rem;
   left: 50%;
   margin-left: -3px;
+}
+.timeline_bubble_left {
+  position: relative;
+}
+.timeline_bubble_left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 2rem;
+  width: 0;
+  z-index: 0;
+  right: 2px;
+  border: medium solid rgba(0, 0, 0, 0.5);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent rgba(0, 0, 0, 0.5);
+}
+.timeline_bubble_right {
+  position: relative;
+}
+.timeline_bubble_right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 2rem;
+  width: 0;
+  z-index: 0;
+  left: 2px;
+  border: medium solid rgba(0, 0, 0, 0.5);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent rgba(0, 0, 0, 0.5) transparent transparent;
+}
+@media screen and (max-width: 767px) {
+  .timeline::after {
+    left: 1rem;
+  }
+  .timeline_bubble_left::before, .timeline_bubble_right::before {
+    right: auto;
+    left: -1px;
+    border-width: 13px 13px 13px 0;
+    border-color: transparent rgba(0, 0, 0, 0.5) transparent transparent ;
+  }
 }

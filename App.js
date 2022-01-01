@@ -150,6 +150,63 @@ var AboutTab = function AboutTab(props) {
   );
 };
 
+var experienceList = [{
+  index: "1",
+  title: "Freelance FullStack Developer",
+  duration: "September 2021 - present"
+}, {
+  index: "2",
+  title: "Undergraduate - University of Moratuwa",
+  duration: "2021 - present",
+  additional_subtitle: "Bsc Engineering"
+}, {
+  index: "3",
+  title: "Intern - Stack Technologies",
+  duration: "September 2019 - August 2021",
+  additional_subtitle: "Fullstack Development"
+}, {
+  index: "4",
+  title: "Student - Royal College, Colombo 07",
+  duration: "2011 - 2019",
+  additional_subtitle: "GCE AL - Mathematics Stream"
+}];
+var ExperienceBubble = function ExperienceBubble(props) {
+  var duration = props.duration;
+
+  return React.createElement(
+    "div",
+    { "class": "row py-2 ps-4 ps-md-0 pe-2 pe-md-0" },
+    props.index % 2 == 1 ? null : React.createElement("div", { "class": "col-md-6" }),
+    React.createElement(
+      "div",
+      { "class": "col col-md-6 timeline_bubble_" + (props.index % 2 == 1 ? "left" : "right") },
+      React.createElement(
+        "div",
+        { "class": "transparent_bg_dark rounded_border card border-0 rounded-0 pb-2 pb-md-4" },
+        React.createElement(
+          "div",
+          { "class": "card-body" },
+          React.createElement(
+            "h3",
+            { "class": "card-title" },
+            props.title
+          ),
+          duration ? React.createElement(
+            "h6",
+            { "class": "card-subtitle text-muted" },
+            duration
+          ) : null,
+          props.additional_subtitle ? React.createElement(
+            "h6",
+            { "class": "card-subtitle mt-1" },
+            props.additional_subtitle
+          ) : null
+        )
+      )
+    ),
+    props.index % 2 == 1 ? React.createElement("div", { "class": "col-md-6" }) : null
+  );
+};
 var ExperienceTab = function ExperienceTab(props) {
 
   return React.createElement(
@@ -161,7 +218,22 @@ var ExperienceTab = function ExperienceTab(props) {
       React.createElement(
         "div",
         { "class": "timeline rounded_border transparent_bg col px-2 px-md-4 py-3" },
-        "EXPERIENCE"
+        React.createElement(
+          "div",
+          { "class": "row ps-4 ps-md-0 mb-2" },
+          React.createElement(
+            "div",
+            { "class": "col-12 col-md-6" },
+            React.createElement(
+              "strong",
+              null,
+              " EXPERIENCE "
+            )
+          )
+        ),
+        experienceList.map(function (exp) {
+          return React.createElement(ExperienceBubble, exp);
+        })
       )
     )
   );

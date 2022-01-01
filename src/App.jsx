@@ -94,13 +94,65 @@ const AboutTab = (props) => {
   );
 };
 
+const experienceList = [
+  {
+    index: "1",
+    title: "Freelance FullStack Developer",
+    duration: "September 2021 - present"
+  },
+  {
+    index: "2",
+    title: "Undergraduate - University of Moratuwa",
+    duration: "2021 - present",
+    additional_subtitle: "Bsc Engineering"
+  },
+  {
+    index: "3",
+    title: "Intern - Stack Technologies",
+    duration: "September 2019 - August 2021", 
+    additional_subtitle: "Fullstack Development"
+  },
+  {
+    index: "4",
+    title: "Student - Royal College, Colombo 07",
+    duration: "2011 - 2019",
+    additional_subtitle: "GCE AL - Mathematics Stream"
+  }
+]
+const ExperienceBubble = (props) => {
+  const duration = props.duration
+
+  return (
+    <div class="row py-2 ps-4 ps-md-0 pe-2 pe-md-0">
+      {props.index%2==1 ? null : <div class="col-md-6" /> }
+      <div class={"col col-md-6 timeline_bubble_"+(props.index%2==1 ? "left" : "right")}>
+        <div class="transparent_bg_dark rounded_border card border-0 rounded-0 pb-2 pb-md-4" >
+          <div class="card-body">
+            <h3 class="card-title">{props.title}</h3>
+            { duration ? <h6 class="card-subtitle text-muted">{duration}</h6> : null }
+            { props.additional_subtitle ? <h6 class="card-subtitle mt-1">{props.additional_subtitle}</h6> : null }
+          </div>
+        </div>
+      </div>
+      {props.index%2==1 ? <div class="col-md-6" /> : null }
+    </div>
+  )
+}
 const ExperienceTab = (props) => {
 
   return (
     <div class="container-fluid py-2">
       <div class="row px-2 px-md-4 py-5 py-md-4 gx-2">
         <div class="timeline rounded_border transparent_bg col px-2 px-md-4 py-3">
-          EXPERIENCE
+
+          <div class="row ps-4 ps-md-0 mb-2">
+            <div class="col-12 col-md-6" ><strong> EXPERIENCE </strong></div>
+          </div>
+
+          {
+            experienceList.map((exp) => <ExperienceBubble {...exp} />)
+          }
+
         </div>
       </div>
     </div>
