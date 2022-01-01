@@ -11,8 +11,12 @@ var NavBarTab = function NavBarTab(_ref) {
 
   return React.createElement(
     "div",
-    { "class": "navbar__tab tabbg__" + color_class, onClick: handleTabClick },
-    name
+    { "class": "col-md-3" },
+    React.createElement(
+      "div",
+      { "class": "navbar__tab rounded_border tabbg__" + color_class, onClick: handleTabClick },
+      name
+    )
   );
 };
 var NavBar = function NavBar(_ref2) {
@@ -22,15 +26,19 @@ var NavBar = function NavBar(_ref2) {
 
   return React.createElement(
     "div",
-    { "class": "navbar__container" },
-    navBarTabs.map(function (t, ind) {
-      return React.createElement(NavBarTab, {
-        name: t.name,
-        color_class: t.color_class,
-        setCurrentTab: setCurrentTab,
-        key: "navbartab" + ind
-      });
-    })
+    { "class": "container-fluid" },
+    React.createElement(
+      "div",
+      { "class": "row px-2 px-md-4 gx-5 pt-3 gy-3 gy-md-0" },
+      navBarTabs.map(function (t, ind) {
+        return React.createElement(NavBarTab, {
+          name: t.name,
+          color_class: t.color_class,
+          setCurrentTab: setCurrentTab,
+          key: "navbartab" + ind
+        });
+      })
+    )
   );
 };
 
@@ -43,25 +51,25 @@ var TabContent = function TabContent(_ref3) {
     case "Experience":
       return React.createElement(
         "div",
-        { "class": "content__container" },
+        { "class": "" },
         currentTab
       );
     case "Tools & Skills":
       return React.createElement(
         "div",
-        { "class": "content__container" },
+        { "class": "" },
         currentTab
       );
     case "More":
       return React.createElement(
         "div",
-        { "class": "content__container" },
+        { "class": "" },
         currentTab
       );
     default:
       return React.createElement(
         "div",
-        { "class": "content__container" },
+        { "class": "" },
         currentTab
       );
   }
@@ -72,58 +80,74 @@ var AboutTab = function AboutTab(props) {
 
   return React.createElement(
     "div",
-    { "class": "content__container" },
+    { "class": "container-fluid" },
     React.createElement(
       "div",
-      { "class": "about__innercontainer" },
+      { "class": "row px-2 px-md-4 gx-5 py-5 py-md-4 gy-3 gy-md-0" },
       React.createElement(
         "div",
-        { "class": "about__leftcolumn" },
+        { "class": "col-12 col-md-9 py-md-2" },
         React.createElement(
-          "h1",
-          null,
-          " Hi! I'm Sandil "
-        ),
-        React.createElement("hr", null),
-        React.createElement(
-          "p",
-          null,
-          "I'm a Fullstack Web Developer with ",
-          expYears,
-          " years of experience and a computer science enthusiast and student."
+          "div",
+          { "class": "rounded_border transparent_bg px-4 py-5 py-md-0 d-flex flex-column justify-content-center" },
+          React.createElement(
+            "h1",
+            null,
+            " Hi! I'm Sandil "
+          ),
+          React.createElement("hr", null),
+          React.createElement(
+            "p",
+            null,
+            "I'm a Fullstack Web Developer with ",
+            expYears,
+            " years of experience and a computer science enthusiast and student."
+          )
         )
       ),
-      React.createElement("img", { src: "./assets/Photo.png", "class": "about__rightimage" })
+      React.createElement(
+        "div",
+        { "class": "col-12 col-md-3 py-md-2" },
+        React.createElement(
+          "div",
+          { "class": "card border-0 rounded-0 rounded_border overflow-hidden" },
+          React.createElement("img", { src: "./assets/Photo.png", "class": "card-img rounded-0", alt: "my picture" })
+        )
+      )
     ),
     React.createElement(
       "div",
-      { "class": "about__bottomcontainer" },
+      { "class": "row px-2 px-md-4 gx-2 pb-2 pb-md-0" },
       React.createElement(
         "div",
-        null,
-        " Sandil S. Ranasinghe "
-      ),
-      React.createElement(
-        "div",
-        { "class": "about__bottomcontainer__email" },
-        React.createElement("i", { "class": "fas fa-envelope about__bottomcontainer__icon" }),
+        { "class": "rounded_border transparent_bg px-2 px-md-4 py-3 col d-flex flex-row justify-content-evenly" },
         React.createElement(
-          "a",
-          { href: "mailto: ranasinghewmdss.20@uom.lk" },
-          "Email"
-        )
-      ),
-      React.createElement(
-        "div",
-        { "class": "about__bottomcontainer__linkedin" },
-        React.createElement("i", { "class": "fab fa-linkedin about__bottomcontainer__icon" }),
+          "div",
+          null,
+          " Sandil S. Ranasinghe "
+        ),
         React.createElement(
-          "a",
-          {
-            href: "https://www.linkedin.com/in/sandil-ranasinghe-a8563890/",
-            target: "_blank"
-          },
-          "LinkedIn"
+          "div",
+          { "class": "about__bottomcontainer__email " },
+          React.createElement("i", { "class": "fas fa-envelope about__bottomcontainer__icon" }),
+          React.createElement(
+            "a",
+            { href: "mailto: ranasinghewmdss.20@uom.lk" },
+            "Email"
+          )
+        ),
+        React.createElement(
+          "div",
+          { "class": "about__bottomcontainer__linkedin " },
+          React.createElement("i", { "class": "fab fa-linkedin about__bottomcontainer__icon" }),
+          React.createElement(
+            "a",
+            {
+              href: "https://www.linkedin.com/in/sandil-ranasinghe-a8563890/",
+              target: "_blank"
+            },
+            "LinkedIn"
+          )
         )
       )
     )
@@ -138,7 +162,7 @@ var App = function App() {
 
   return React.createElement(
     "div",
-    { "class": "layoutcontainer" },
+    { "class": "container-fluid" },
     React.createElement(NavBar, { setCurrentTab: setCurrentTab }),
     React.createElement(TabContent, { currentTab: currentTab })
   );
