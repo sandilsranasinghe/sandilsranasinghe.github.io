@@ -49,11 +49,7 @@ var TabContent = function TabContent(_ref3) {
     case "About":
       return React.createElement(AboutTab, null);
     case "Experience":
-      return React.createElement(
-        "div",
-        { "class": "" },
-        currentTab
-      );
+      return React.createElement(ExperienceTab, null);
     case "Tools & Skills":
       return React.createElement(
         "div",
@@ -120,16 +116,16 @@ var AboutTab = function AboutTab(props) {
       { "class": "row px-2 px-md-4 gx-2 pb-2 pb-md-0" },
       React.createElement(
         "div",
-        { "class": "rounded_border transparent_bg px-2 px-md-4 py-3 col d-flex flex-row justify-content-evenly" },
+        { "class": "rounded_border transparent_bg px-2 px-md-4 py-3 col d-flex flex-row justify-content-evenly justify-content-md-start" },
         React.createElement(
           "div",
-          null,
+          { "class": "me-md-4" },
           " Sandil S. Ranasinghe "
         ),
         React.createElement(
           "div",
-          { "class": "about__bottomcontainer__email " },
-          React.createElement("i", { "class": "fas fa-envelope about__bottomcontainer__icon" }),
+          { "class": "mx-md-4 about_icon" },
+          React.createElement("i", { "class": "fas fa-envelope me-1" }),
           React.createElement(
             "a",
             { href: "mailto: ranasinghewmdss.20@uom.lk" },
@@ -138,8 +134,8 @@ var AboutTab = function AboutTab(props) {
         ),
         React.createElement(
           "div",
-          { "class": "about__bottomcontainer__linkedin " },
-          React.createElement("i", { "class": "fab fa-linkedin about__bottomcontainer__icon" }),
+          { "class": "mx-md-4 about_icon" },
+          React.createElement("i", { "class": "fab fa-linkedin me-1" }),
           React.createElement(
             "a",
             {
@@ -149,6 +145,23 @@ var AboutTab = function AboutTab(props) {
             "LinkedIn"
           )
         )
+      )
+    )
+  );
+};
+
+var ExperienceTab = function ExperienceTab(props) {
+
+  return React.createElement(
+    "div",
+    { "class": "container-fluid py-2" },
+    React.createElement(
+      "div",
+      { "class": "row px-2 px-md-4 py-5 py-md-4 gx-2" },
+      React.createElement(
+        "div",
+        { "class": "timeline rounded_border transparent_bg col px-2 px-md-4 py-3" },
+        "EXPERIENCE"
       )
     )
   );

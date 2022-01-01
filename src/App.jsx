@@ -40,7 +40,7 @@ const TabContent = ({ currentTab }) => {
     case "About":
       return <AboutTab />;
     case "Experience":
-      return <div class="">{currentTab}</div>;
+      return <ExperienceTab />;
     case "Tools & Skills":
       return <div class="">{currentTab}</div>;
     case "More":
@@ -58,12 +58,12 @@ const AboutTab = (props) => {
       <div class="row px-2 px-md-4 gx-5 py-5 py-md-4 gy-3 gy-md-0">
         <div class="col-12 col-md-9 py-md-2">
           <div class="rounded_border transparent_bg px-4 py-5 py-md-0 d-flex flex-column justify-content-center">
-          <h1> Hi! I'm Sandil </h1>
-          <hr />
-          <p>
-            I'm a Fullstack Web Developer with {expYears} years of experience
-            and a computer science enthusiast and student.
-          </p>
+            <h1> Hi! I'm Sandil </h1>
+            <hr />
+            <p>
+              I'm a Fullstack Web Developer with {expYears} years of experience
+              and a computer science enthusiast and student.
+            </p>
           </div>
         </div>
         <div class="col-12 col-md-3 py-md-2" >
@@ -73,26 +73,39 @@ const AboutTab = (props) => {
         </div>
       </div>
       <div class="row px-2 px-md-4 gx-2 pb-2 pb-md-0">
-        <div class="rounded_border transparent_bg px-2 px-md-4 py-3 col d-flex flex-row justify-content-evenly">
-        <div > Sandil S. Ranasinghe </div>
-        <div class="about__bottomcontainer__email ">
-          <i class="fas fa-envelope about__bottomcontainer__icon"></i>
-          <a href="mailto: ranasinghewmdss.20@uom.lk">Email</a>
-        </div>
-        <div class="about__bottomcontainer__linkedin ">
-          <i class="fab fa-linkedin about__bottomcontainer__icon"></i>
-          <a
-            href="https://www.linkedin.com/in/sandil-ranasinghe-a8563890/"
-            target="_blank"
-          >
-            LinkedIn
-          </a>
-        </div>
+        <div class="rounded_border transparent_bg px-2 px-md-4 py-3 col d-flex flex-row justify-content-evenly justify-content-md-start">
+          <div class="me-md-4" > Sandil S. Ranasinghe </div>
+          <div class="mx-md-4 about_icon">
+            <i class="fas fa-envelope me-1"></i>
+            <a href="mailto: ranasinghewmdss.20@uom.lk">Email</a>
+          </div>
+          <div class="mx-md-4 about_icon">
+            <i class="fab fa-linkedin me-1"></i>
+            <a
+              href="https://www.linkedin.com/in/sandil-ranasinghe-a8563890/"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
       </div>
     </div>
   );
 };
+
+const ExperienceTab = (props) => {
+
+  return (
+    <div class="container-fluid py-2">
+      <div class="row px-2 px-md-4 py-5 py-md-4 gx-2">
+        <div class="timeline rounded_border transparent_bg col px-2 px-md-4 py-3">
+          EXPERIENCE
+        </div>
+      </div>
+    </div>
+  )
+}
 
 const App = () => {
   const [currentTab, setCurrentTab] = React.useState("About");
