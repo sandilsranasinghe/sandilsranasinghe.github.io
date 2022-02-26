@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/sandilsranasinghe.github.io/static/css/main.22cbcd60.css",
-    "main.js": "/sandilsranasinghe.github.io/static/js/main.8e671078.js",
-    "static/media/Photo.jpg": "/sandilsranasinghe.github.io/static/media/Photo.f61f10004dfad7293799.jpg",
-    "index.html": "/sandilsranasinghe.github.io/index.html",
-    "main.22cbcd60.css.map": "/sandilsranasinghe.github.io/static/css/main.22cbcd60.css.map",
-    "main.8e671078.js.map": "/sandilsranasinghe.github.io/static/js/main.8e671078.js.map"
+    "main.css": "/static/css/main.22cbcd60.css",
+    "main.js": "/static/js/main.8828e3a7.js",
+    "static/media/Photo.jpg": "/static/media/Photo.f61f10004dfad7293799.jpg",
+    "index.html": "/index.html",
+    "main.22cbcd60.css.map": "/static/css/main.22cbcd60.css.map",
+    "main.8828e3a7.js.map": "/static/js/main.8828e3a7.js.map"
   },
   "entrypoints": [
     "static/css/main.22cbcd60.css",
-    "static/js/main.8e671078.js"
+    "static/js/main.8828e3a7.js"
   ]
 }
