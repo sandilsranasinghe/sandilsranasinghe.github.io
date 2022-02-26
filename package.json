@@ -1,12 +1,40 @@
 {
-  "name": "sandilsranasinghe",
-  "version": "0.0.1",
-  "description": "about me",
-  "main": "index.js",
-  "author": "donra",
-  "license": "MIT",
+  "name": "sandilsranasinghe.github.io",
+  "version": "0.2.0",
+  "private": true,
   "dependencies": {
-    "babel-cli": "6",
-    "babel-preset-react-app": "3"
-  }
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  },
+  "homepage": "sandilsranasinghe.github.io/"
 }
