@@ -50,11 +50,11 @@ export const Footer = () => {
   return (
     <footer>
       <div>
-        <a href="mailto: ranasinghewmdss.20@uom.lk">Email</a>
+        <a href="mailto: sandil.20@cse.mrt.ac.lk">Email</a>
       </div>
       <div>
         <a
-          href="https://www.linkedin.com/in/sandil-ranasinghe-a8563890/"
+          href="https://www.linkedin.com/in/sandilsranasinghe/"
           target={"_blank"}
         >
           Linkedin
