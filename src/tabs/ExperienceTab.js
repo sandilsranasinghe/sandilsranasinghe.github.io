@@ -3,11 +3,11 @@ import experienceList from "./experience.json";
 const ExperienceBubble = (props) => {
   return (
     <div className="horizontal-container">
-      {props.index % 2 == 1 ? null : <div className="filler card card-2" />}
+      {props.index % 2 === 1 ? null : <div className="filler card card-2" />}
       <div
         className={
           "card card-2 timeline_bubble_" +
-          (props.index % 2 == 1 ? "left" : "right")
+          (props.index % 2 === 1 ? "left" : "right")
         }
       >
         <h2 className="">{props.title}</h2>
@@ -28,16 +28,25 @@ const ExperienceBubble = (props) => {
                 <div>
                   <h4>{c.value}</h4>
                   <ul>
-                    {c.points.map((point) => (
-                      <li>{point}</li>
-                    ))}
+                    {c.points.map((point) => {
+                      if (point.extras.link) {
+                        return (
+                          <li>
+                            <a href={`${point.extras.link}`} className="link-light">
+                              {point.point}
+                            </a>
+                          </li>
+                        );
+                      }
+                      return <li>{point.point}</li>;
+                    })}
                   </ul>
                 </div>
               );
             })
           : null}
       </div>
-      {props.index % 2 == 1 ? <div className="filler card card-2" /> : null}
+      {props.index % 2 === 1 ? <div className="filler card card-2" /> : null}
     </div>
   );
 };

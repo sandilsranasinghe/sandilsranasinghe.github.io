@@ -466,3 +466,10 @@ h2 {
     width: calc(5vw - 0.5rem);
   }
 }
+
+.link-light {
+  color: #7777ff;
+}
+.link-light:hover {
+  color: #777777;
+}
