@@ -39,12 +39,12 @@ const HomeTab = (props) => {
 
   return (
     <div id="content-home" className="content-container">
-      <h1>Welcome to My Site!</h1>
+      <h1>Hi! I'm Sandil Ranasinghe</h1>
 
       <div className="horizontal-container">
         <div className="card card-3 scroll-fade">
           <p>
-            <b>Hi! I'm Sandil</b>
+            <b>About Me</b>
           </p>
           <hr />
           <p>
@@ -70,7 +70,7 @@ const HomeTab = (props) => {
         </div>
         <img
           src={myimg}
-          alt="my picture"
+          alt="Image of Sandil"
           className="card-img-3 scroll-fade"
         />
       </div>
