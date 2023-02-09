@@ -1,52 +1,54 @@
 import { HomeTab, ExperienceTab, MoreTab } from "./tabs";
+import {
+  RouterProvider,
+  createBrowserRouter,
+  Link,
+  useLocation,
+  Outlet,
+} from "react-router-dom";
 
-export const TabContent = ({ currentTab }) => {
-  switch (currentTab) {
-    case "home":
-      return <HomeTab />;
-    case "experience":
-      return <ExperienceTab />;
-    case "more":
-      return <MoreTab />;
-    default:
-      return <HomeTab />;
-  }
-};
+const AppLayout = () => (
+  <div id="inner-root">
+    <NavBar />
+    <Outlet />
+    <Footer />
+    <AnimatedSquares />
+  </div>
+);
 
-export const NavBar = ({ currentTab, setCurrentTab }) => {
-  const handleTabClick = (tabId) => {
-    setCurrentTab(tabId);
-    console.log(currentTab);
-  };
-
+const NavBar = () => {
+  const location = useLocation();
   return (
     <header id="tab-menu">
       <div
         id="tab-home"
-        onClick={() => handleTabClick("home")}
-        className={currentTab === "home" ? "selected-tab" : ""}
+        className={location.pathname === "/" ? "selected-tab" : ""}
       >
-        Home
+        <Link to={`/`} className="link">
+          Home
+        </Link>
       </div>
       <div
         id="tab-experience"
-        onClick={() => handleTabClick("experience")}
-        className={currentTab === "experience" ? "selected-tab" : ""}
+        className={location.pathname === "/experience" ? "selected-tab" : ""}
       >
-        Experience
+        <Link to={`/experience`} className="link">
+          Experience
+        </Link>
       </div>
       <div
         id="tab-more"
-        onClick={() => handleTabClick("more")}
-        className={currentTab === "more" ? "selected-tab" : ""}
+        className={location.pathname === "/more" ? "selected-tab" : ""}
       >
-        More
+        <Link to={`/more`} className="link">
+          More
+        </Link>
       </div>
     </header>
   );
 };
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <footer>
       <div>
@@ -77,20 +79,42 @@ export const Footer = () => {
   );
 };
 
-export const AnimatedSquares = () => {
+const AnimatedSquares = () => {
   return (
     <div id="square-animation-container">
-      <div className="square-md square-animated"></div>
-      <div className="square-sm square-animated"></div>
-      <div className="square-lg square-animated"></div>
-      <div className="square-sm square-animated"></div>
-      <div className="square-sm square-animated"></div>
-      <div className="square-md square-animated"></div>
-      <div className="square-lg square-animated"></div>
-      <div className="square-sm square-animated"></div>
-      <div className="square-sm square-animated"></div>
-      <div className="square-md square-animated"></div>
-      <div className="square-sm square-animated"></div>
+      <div aria-hidden="true" className="square-md square-animated"></div>
+      <div aria-hidden="true" className="square-sm square-animated"></div>
+      <div aria-hidden="true" className="square-lg square-animated"></div>
+      <div aria-hidden="true" className="square-sm square-animated"></div>
+      <div aria-hidden="true" className="square-sm square-animated"></div>
+      <div aria-hidden="true" className="square-md square-animated"></div>
+      <div aria-hidden="true" className="square-lg square-animated"></div>
+      <div aria-hidden="true" className="square-sm square-animated"></div>
+      <div aria-hidden="true" className="square-sm square-animated"></div>
+      <div aria-hidden="true" className="square-md square-animated"></div>
+      <div aria-hidden="true" className="square-sm square-animated"></div>
     </div>
   );
 };
+
+const TabRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <HomeTab />,
+      },
+      {
+        path: "/experience",
+        element: <ExperienceTab />,
+      },
+      {
+        path: "/more",
+        element: <MoreTab />,
+      },
+    ],
+  },
+]);
+export const TabContent = () => <RouterProvider router={TabRouter} />;
