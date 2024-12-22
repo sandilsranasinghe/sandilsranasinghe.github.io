@@ -22,6 +22,12 @@ const ExperienceBubble = (props) => {
 
         <hr />
 
+        {props.description ? (
+          <div>
+            <p>{props.description}</p>
+          </div>
+        ) : null}
+
         {props.content
           ? props.content.map((c) => {
               return (
@@ -53,7 +59,7 @@ const ExperienceBubble = (props) => {
 const ExperienceTab = (props) => {
   return (
     <div className="content-container timeline">
-      <h2> EXPERIENCE </h2>
+      {/* <h2> EXPERIENCE </h2> */}
 
       {experienceList.map((exp) => (
         <ExperienceBubble {...exp} />

@@ -6,6 +6,7 @@ import {
   useLocation,
   Outlet,
 } from "react-router-dom";
+import cvPDF from "./assets/cv.pdf";
 
 const AppLayout = () => (
   <div id="inner-root">
@@ -36,13 +37,24 @@ const NavBar = () => {
           Experience
         </Link>
       </div>
-      <div
+      {/* <div
         id="tab-more"
         className={location.pathname === "/more" ? "selected-tab" : ""}
       >
         <Link to={`/more`} className="link">
           More
         </Link>
+      </div> */}
+      <div id="tab-cv">
+        <a
+          href={cvPDF}
+          target="_blank"
+          rel="noreferrer"
+          className="link"
+          download="Sandil_Ranasinghe_CV.pdf"
+        >
+          CV
+        </a>
       </div>
     </header>
   );
@@ -52,7 +64,7 @@ const Footer = () => {
   return (
     <footer>
       <div>
-        <a href="mailto: sandil.20@cse.mrt.ac.lk">Email</a>
+        <a href="mailto: sandilsranasinghe@gmail.com">Email</a>
       </div>
       <div>
         <a

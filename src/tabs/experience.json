@@ -1,9 +1,60 @@
 [
     {
+        "index": 8,
+        "title": "Ruach Holdings (lk) - Consultant Software Developer",
+        "duration": "August 2024 - November 2024",
+        "additional_subtitle": "Part Time",
+        "description": "Adapting existing codebase of a framework for a new web application prototype. I was responsible for initial containerisation, dev server deployment as well as designing DB extensions, logical flow and implementing API endpoints for new modules added.",
+        "content": [
+            {
+                "value": "",
+                "points": [
+                    {
+                        "point": "Tech Stack - NodeJS, NestJS, NextJS, Docker",
+                        "extras": {}
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "index": "7",
+        "title": "University of Moratuwa - Teaching Assistant",
+        "duration": "May 2024 - December 2024",
+        "additional_subtitle": "CSE - Operating Systems Module",
+        "description": "Conducted lab sessions and evaluated quizzes/labs for semester 3 Operating Systems module."
+    },
+    {
+        "index": "6",
+        "title": "H2O.ai - Data Science Intern",
+        "duration": "November 2023 - August 2024",
+        "additional_subtitle": "Customer Data Science Team",
+        "description": "Developed GenAI-based applications using H2O.ai's h2oGPTe RAG system and h2o Wave application framework to solve real-world business problems. Experienced in fine-tuning prompts and utilizing large language models (LLMs) for tasks such as context-based question generation and semantic similarity evaluations for content benchmarking. Received exposure to coding web applications with a focus on error handling and concurrency for performance optimization.",
+        "content": [
+            {
+                "value": "",
+                "points": [
+                    {
+                        "point": "Tech Stack - Python, h2o wave, h2oGPTe",
+                        "extras": {}
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "index": "5",
-        "title": "Contributor - Google Summer of Code 2022",
+        "title": "IFS x Hatch ChallengerX - Participant",
+        "duration": "December 2022 - May 2023",
+        "additional_subtitle": "Machine Learning Incubator Program",
+        "description": "Part of a 4 member team selected for the program from dozens of teams across multiple universities. We received the opportunity to meet and be mentored by industry leaders while developing a solution for modeling and predicting damage to assets due to natural disasters. My primary responsibility involved designing and implementing a robust Machine Learning pipeline."
+    },
+    {
+        "index": "4",
+        "title": "Google Summer of Code 2022 - Contributor",
         "duration": "May 2022 - September 2022",
         "additional_subtitle": "Organization - Wagtail CMS",
+        "description": "Main changes merged into open source CMS Wagtail while additional features are maintained as a separate package. Received mentoring by experienced developers, gaining valuable insights into coding best practices alongside technological expertise.",
         "content": [
             {
                 "value": "",
@@ -23,10 +74,11 @@
         ]
     },
     {
-        "index": "4",
-        "title": "Intern - Stack Technologies",
-        "duration": "September 2019 - August 2021 (2 years)",
+        "index": "3",
+        "title": "Stack Technologies - Intern",
+        "duration": "September 2019 - August 2021",
         "additional_subtitle": "Fullstack Development",
+        "description": "Received training and then worked as a full stack developer, utilizing widely used frameworks such as React and Django.",
         "content": [
             {
                 "value": "Projects Worked on",
@@ -46,10 +98,10 @@
                 ]
             },
             {
-                "value": "Tech Stack",
+                "value": "",
                 "points": [
                     {
-                        "point": "Python, Django, DRF - Javascript, ReactJS, ReactAdmin - SQL, PostgreSQL - Nginx - DockerCompose - Git",
+                        "point": "Tech Stack - Python, Django, DRF - Javascript, ReactJS, ReactAdmin - SQL, PostgreSQL - Nginx - DockerCompose - Git",
                         "extras": {}
                     }
                 ]
@@ -57,10 +109,10 @@
         ]
     },
     {
-        "index": "3",
+        "index": "2",
         "title": "Undergraduate - University of Moratuwa",
-        "duration": "2021 - present",
-        "additional_subtitle": "Bsc Engineering",
+        "duration": "2021 - 2025",
+        "additional_subtitle": "Bsc Engineering - Computer Science and Engineering",
         "content": [
             {
                 "value": "Extra Activities",
@@ -90,66 +142,27 @@
         ]
     },
     {
-        "index": "2",
-        "title": "Freelance FullStack Developer",
-        "duration": "September 2021 - present",
+        "index": "1",
+        "title": "Freelance - FullStack Developer",
+        "duration": "Sep 2021 onwards",
         "content": [
             {
-                "value": "Some work done",
+                "value": "Some Work Done",
                 "points": [
                     {
                         "point": "Setting up Moodle LMS for cjmaths.lk",
                         "extras": {}
                     },
                     {
-                        "point": "Programming assignment writing for undergraduates",
-                        "extras": {}
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "index": "1",
-        "title": "Student - Royal College, Colombo 07",
-        "duration": "2011 - 2019",
-        "additional_subtitle": "GCE AL - Mathematics Stream",
-        "content": [
-            {
-                "value": "GCE AL Mathematics",
-                "points": [
-                    {
-                        "point": "3As",
+                        "point": "Developing an AI-powered resume review application for The Job Helpers",
                         "extras": {}
                     },
                     {
-                        "point": "Countrywide Rank 67",
-                        "extras": {}
-                    }
-                ]
-            },
-            {
-                "value": "English Debaters Council (2015-2018)",
-                "points": [
-                    {
-                        "point": "Treasurer - 2017/2018",
+                        "point": "Assisting undergraduate/research students with code/script parts of projects (Web/ML)",
                         "extras": {}
                     },
                     {
-                        "point": "Represented School at AWSDC 2016",
-                        "extras": {}
-                    },
-                    {
-                        "point": "Represented School at all main debate tournaments in the country",
-                        "extras": {}
-                    }
-                ]
-            },
-            {
-                "value": "Gavel Club (2011-2018)",
-                "points": [
-                    {
-                        "point": "Board Member (2016/2017)",
+                        "point": "Web Scraping project for Avonov Global",
                         "extras": {}
                     }
                 ]
